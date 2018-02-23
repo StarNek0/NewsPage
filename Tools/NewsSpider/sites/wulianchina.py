@@ -84,10 +84,18 @@ def get_pages(page_urls):
                     print key_word, '---', whole_page[0:55]
                     page_type=4
 
+            cur = db.cursor()
+            sql = "select count(*) from news_news where theme='%s'" % theme
+            cur.execute(sql)
+            res = cur.fetchone()[0]
+            if res:
+                print res
+                cur.close()
+                continue
 
             sql = "insert into news_news(source_site,content,source_url,page_date,tag,theme) values('%s','%s','%s','%s','%s', '%s')" % (from_site, whole_page, page_url, page_date, dic[page_type], theme)
-            cur = db.cursor()
             cur.execute(sql)
+
             db.commit()
             cur.close()
         except Exception as e:

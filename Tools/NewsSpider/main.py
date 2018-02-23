@@ -15,6 +15,8 @@ import sites.ofweek as ofweek
 import sites.wulianchina as wulianchina
 
 DATE = time.strftime('%Y-%m-%d',time.localtime(time.time()))
+DATE = '2018-02-22'
+print DATE
 # i=0
 # while True:
 #     DATE = time.strftime('%Y-%m-%d',time.localtime(time.time()-i*(3600*24)))
