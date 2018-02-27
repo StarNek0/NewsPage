@@ -10,28 +10,35 @@
 --------------------------------------------------------------------------
 """
 import time
+import pymysql
 
 import sites.ofweek as ofweek
 import sites.wulianchina as wulianchina
-
+from sub_word.score_it import exam
 while True:
-    DATE1 = time.strftime('%Y-%m-%d',time.localtime(time.time()))
-    DATE2 = time.strftime('%Y-%m-%d',time.localtime(time.time()))
+    # 打分
+    db = pymysql.connect(host="localhost", user="root", password="klxsxzsdf1", db="newsspider", port=3306,charset='utf8')
+    cur = db.cursor()
+    sql = "select id,score,theme from news_news GROUP BY theme"
+    cur.execute(sql)
+    whole_datas = cur.fetchall()
+    cur.close()
+    for data in whole_datas:
+        if data[1] == 0:
+            cur = db.cursor()
+            sql = 'update news_news set score=%d where id=%d' % (exam(data[2]), data[0])
+            cur.execute(sql)
+            db.commit()
+            cur.close()
+    db.close()
 
-# i=0
-# while True:
-#     DATE = time.strftime('%Y-%m-%d',time.localtime(time.time()-i*(3600*24)))
-#     i += 1
-#     print DATE
-#
-#     ofweek.DATE = DATE
-#     ofweek.main()
-#
-#     wulianchina.DATE = DATE
-#     wulianchina.main()
-    ofweek.DATE = DATE1
-    ofweek.main()
-    wulianchina.DATE = DATE2
+
+    # 爬虫
+    DATE1 = time.strftime('%Y-%m-%d',time.localtime(time.time()))
+    DATE2 = time.strftime('%Y-%m-%d',time.localtime(time.time()-24*3600))
+    wulianchina.DATE = DATE1
     wulianchina.main()
-    
-    time.sleep(2*3600)
+    ofweek.DATE = DATE2
+    ofweek.main()
+
+    time.sleep(3*3600)

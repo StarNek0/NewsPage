@@ -9,6 +9,7 @@ from django.db import models
 class news(models.Model):
     head = models.CharField(max_length=255, verbose_name="标题")
     theme = models.TextField(verbose_name="主题", null=True, blank=True)
+    score = models.IntegerField(verbose_name='评分',default=0)
     content = models.TextField(verbose_name="全文", null=True, blank=True)
     source_site = models.CharField(max_length=255, verbose_name="来源站")
     source_url = models.CharField(max_length=255, verbose_name="来源URL")

@@ -59,12 +59,12 @@ def spider(urls):
                     try:
                         cur = db.cursor()
 
-                        sql = "select count(*) from news_news where theme='%s'" % themes[i]
+                        sql = "select count(*) from news_news where theme like '%%%s%%'" % themes[i]
 
                         cur.execute(sql)
                         res = cur.fetchone()[0]
                         if res:
-                            print res
+                            print 'ofweek:', res
                             cur.close()
 
                             continue
