@@ -19,7 +19,7 @@ from django.contrib import admin
 from news.views import NewsView
 
 urlpatterns = [
-    # url(r'^admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls),
     url(r'^$', NewsView.as_view(), name='datenews'),
     url(r'^(?P<date>.*)/$', NewsView.as_view(), name='news'),
 ]

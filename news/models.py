@@ -15,3 +15,8 @@ class news(models.Model):
     tag = models.CharField(max_length=255, verbose_name="标签")
     keywords = models.CharField(max_length=255, verbose_name="关键词")
     page_date = models.CharField(max_length=255, verbose_name="日期")
+    class Meta:
+        verbose_name='theme'
+        verbose_name_plural='theme'
+    def __unicode__(self):
+        return self.theme

@@ -7,8 +7,9 @@ from .models import news
 
 
 class NewsView(View):
-    def get(self, request, date=time.strftime('%Y-%m-%d', time.localtime(time.time()))):
-        
+    def get(self, request, date=None):
+        if date is None:
+	    date = time.strftime('%Y-%m-%d', time.localtime(time.time()))
         DATE_Array = time.strptime(date, '%Y-%m-%d')
         DATE_Stamp = int(time.mktime(DATE_Array))
         front_date=time.strftime('%Y-%m-%d', time.localtime(DATE_Stamp-24*3600))

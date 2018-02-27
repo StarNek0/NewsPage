@@ -56,8 +56,15 @@ def spider(urls):
                             page_type = 4
                     try:
                         cur = db.cursor()
-                        cur.execute("insert into news_news(theme,page_date,tag) values('%s','%s','%s')" % (themes[i], dates[i], dic[page_type]))
-                        db.commit()
+			sql = "select count(*) from news_news where theme='%s'" % themes[i]
+                        cur.execute(sql)
+                        res = cur.fetchone()[0]
+                        if res:
+                            print res
+                            cur.close()
+                            continue    
+			cur.execute("insert into news_news(theme,page_date,tag) values('%s','%s','%s')" % (themes[i], dates[i], dic[page_type]))
+			db.commit()
                         cur.close()
                     except Exception as e:
                         print e
