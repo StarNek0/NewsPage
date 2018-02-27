@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20195871-4be7-4e61-9838-fb0f7c39c7de" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/Tools/NewsSpider/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/NewsPage.iml" afterPath="$PROJECT_DIR$/.idea/NewsPage.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Tools/NewsSpider/sites/chromedriver.exe" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Tools/NewsSpider/sites/ofweek.py" afterPath="$PROJECT_DIR$/Tools/NewsSpider/sites/ofweek.py" />
+      <change beforePath="$PROJECT_DIR$/Tools/NewsSpider/sites/policy_of_gaoxin.py" afterPath="$PROJECT_DIR$/Tools/NewsSpider/sites/policy_of_gaoxin.py" />
+      <change beforePath="$PROJECT_DIR$/Tools/NewsSpider/sites/wulianchina.py" afterPath="$PROJECT_DIR$/Tools/NewsSpider/sites/wulianchina.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,20 +39,19 @@
       <file leaf-file-name="policy_of_gaoxin.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tools/NewsSpider/sites/policy_of_gaoxin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="137" column="0" lean-forward="true" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+            <state relative-caret-position="405">
+              <caret line="18" column="7" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
               <folding>
-                <element signature="e#364#379#0" expanded="true" />
-                <marker date="1519745020786" expanded="true" signature="2406:2454" ph="select count... news_gov_msg" />
-                <marker date="1519745020786" expanded="true" signature="2680:2821" ph="INSERT INTO news_gov_msg... " />
-                <marker date="1519745020786" expanded="true" signature="2691:2821" ph="insert into news_gov_msg... " />
-                <marker date="1519745020786" expanded="true" signature="3604:3669" ph="select count... news_file" />
-                <marker date="1519745020786" expanded="true" signature="3604:3673" ph="select count... news_file" />
-                <marker date="1519745020786" expanded="true" signature="3604:3698" ph="select count... news_file" />
-                <marker date="1519745020786" expanded="true" signature="3970:4046" ph="INSERT INTO news_file... " />
-                <marker date="1519745020786" expanded="true" signature="4699:4749" ph="select count... news_file" />
-                <marker date="1519745020786" expanded="true" signature="5070:5146" ph="INSERT INTO news_file... " />
-                <marker date="1519745020786" expanded="true" signature="5081:5091" ph="insert into news_file... " />
+                <marker date="1519747262430" expanded="true" signature="2408:2456" ph="select count... news_gov_msg" />
+                <marker date="1519747262430" expanded="true" signature="2682:2823" ph="INSERT INTO news_gov_msg... " />
+                <marker date="1519747262430" expanded="true" signature="2693:2823" ph="insert into news_gov_msg... " />
+                <marker date="1519747262430" expanded="true" signature="3606:3671" ph="select count... news_file" />
+                <marker date="1519747262430" expanded="true" signature="3606:3675" ph="select count... news_file" />
+                <marker date="1519747262430" expanded="true" signature="3606:3700" ph="select count... news_file" />
+                <marker date="1519747262430" expanded="true" signature="3972:4048" ph="INSERT INTO news_file... " />
+                <marker date="1519747262430" expanded="true" signature="4701:4751" ph="select count... news_file" />
+                <marker date="1519747262430" expanded="true" signature="5072:5148" ph="INSERT INTO news_file... " />
+                <marker date="1519747262430" expanded="true" signature="5083:5093" ph="insert into news_file... " />
               </folding>
             </state>
           </provider>
@@ -57,8 +60,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/news/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="41" column="23" lean-forward="false" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+            <state relative-caret-position="837">
+              <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -68,11 +71,10 @@
         <entry file="file://$PROJECT_DIR$/Tools/NewsSpider/sites/wulianchina.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="88" column="12" lean-forward="true" selection-start-line="88" selection-start-column="12" selection-end-line="94" selection-end-column="24" />
+              <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
               <folding>
-                <element signature="e#399#414#0" expanded="true" />
-                <marker date="1519729574799" expanded="true" signature="3060:3107" ph="select count... news_news" />
-                <marker date="1519729574799" expanded="true" signature="3302:3414" ph="insert into news_news... " />
+                <marker date="1519747262325" expanded="true" signature="3062:3109" ph="select count... news_news" />
+                <marker date="1519747262325" expanded="true" signature="3304:3416" ph="insert into news_news... " />
               </folding>
             </state>
           </provider>
@@ -101,12 +103,13 @@
       <list>
         <option value="$PROJECT_DIR$/news/views.py" />
         <option value="$PROJECT_DIR$/Tools/NewsSpider/main.py" />
-        <option value="$PROJECT_DIR$/Tools/NewsSpider/sites/ofweek.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/Tools/NewsSpider/company.py" />
-        <option value="$PROJECT_DIR$/Tools/NewsSpider/sites/wulianchina.py" />
         <option value="$PROJECT_DIR$/news/models.py" />
+        <option value="$PROJECT_DIR$/Tools/NewsSpider/__init__.py" />
+        <option value="$PROJECT_DIR$/Tools/NewsSpider/sites/wulianchina.py" />
         <option value="$PROJECT_DIR$/Tools/NewsSpider/sites/policy_of_gaoxin.py" />
+        <option value="$PROJECT_DIR$/Tools/NewsSpider/sites/ofweek.py" />
       </list>
     </option>
   </component>
@@ -331,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519745194663</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="完成对项目申报文件的爬取">
+      <created>1519745679744</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1519745679744</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -395,17 +405,16 @@
         <state relative-caret-position="378">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
-            <element signature="e#364#379#0" expanded="true" />
-            <marker date="1519745020786" expanded="true" signature="2406:2454" ph="select count... news_gov_msg" />
-            <marker date="1519745020786" expanded="true" signature="2680:2821" ph="INSERT INTO news_gov_msg... " />
-            <marker date="1519745020786" expanded="true" signature="2691:2821" ph="insert into news_gov_msg... " />
-            <marker date="1519745020786" expanded="true" signature="3604:3669" ph="select count... news_file" />
-            <marker date="1519745020786" expanded="true" signature="3604:3673" ph="select count... news_file" />
-            <marker date="1519745020786" expanded="true" signature="3604:3698" ph="select count... news_file" />
-            <marker date="1519745020786" expanded="true" signature="3970:4046" ph="INSERT INTO news_file... " />
-            <marker date="1519745020786" expanded="true" signature="4699:4749" ph="select count... news_file" />
-            <marker date="1519745020786" expanded="true" signature="5070:5146" ph="INSERT INTO news_file... " />
-            <marker date="1519745020786" expanded="true" signature="5081:5091" ph="insert into news_file... " />
+            <marker date="1519747262430" expanded="true" signature="2408:2456" ph="select count... news_gov_msg" />
+            <marker date="1519747262430" expanded="true" signature="2682:2823" ph="INSERT INTO news_gov_msg... " />
+            <marker date="1519747262430" expanded="true" signature="2693:2823" ph="insert into news_gov_msg... " />
+            <marker date="1519747262430" expanded="true" signature="3606:3671" ph="select count... news_file" />
+            <marker date="1519747262430" expanded="true" signature="3606:3675" ph="select count... news_file" />
+            <marker date="1519747262430" expanded="true" signature="3606:3700" ph="select count... news_file" />
+            <marker date="1519747262430" expanded="true" signature="3972:4048" ph="INSERT INTO news_file... " />
+            <marker date="1519747262430" expanded="true" signature="4701:4751" ph="select count... news_file" />
+            <marker date="1519747262430" expanded="true" signature="5072:5148" ph="INSERT INTO news_file... " />
+            <marker date="1519747262430" expanded="true" signature="5083:5093" ph="insert into news_file... " />
           </folding>
         </state>
       </provider>
@@ -415,9 +424,8 @@
         <state relative-caret-position="1107">
           <caret line="41" column="57" lean-forward="true" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
           <folding>
-            <element signature="e#399#414#0" expanded="true" />
-            <marker date="1519729574799" expanded="true" signature="3060:3107" ph="select count... news_news" />
-            <marker date="1519729574799" expanded="true" signature="3302:3414" ph="insert into news_news... " />
+            <marker date="1519747262325" expanded="true" signature="3062:3109" ph="select count... news_news" />
+            <marker date="1519747262325" expanded="true" signature="3304:3416" ph="insert into news_news... " />
           </folding>
         </state>
       </provider>
@@ -458,6 +466,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3e56ed73-ae82-4f8d-b5a8-4b1e72d66295/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Tools/NewsSpider/company.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -466,18 +482,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tools/NewsSpider/sites/ofweek.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding>
-            <marker date="1519726835981" expanded="true" signature="2032:2079" ph="select count... news_news" />
-            <marker date="1519726835981" expanded="true" signature="2369:2434" ph="insert into news_news... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3e56ed73-ae82-4f8d-b5a8-4b1e72d66295/console.sql">
+    <entry file="file://$PROJECT_DIR$/Tools/NewsSpider/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -488,39 +493,48 @@
     <entry file="file://$PROJECT_DIR$/Tools/NewsSpider/sites/wulianchina.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="88" column="12" lean-forward="true" selection-start-line="88" selection-start-column="12" selection-end-line="94" selection-end-column="24" />
+          <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
           <folding>
-            <element signature="e#399#414#0" expanded="true" />
-            <marker date="1519729574799" expanded="true" signature="3060:3107" ph="select count... news_news" />
-            <marker date="1519729574799" expanded="true" signature="3302:3414" ph="insert into news_news... " />
+            <marker date="1519747262325" expanded="true" signature="3062:3109" ph="select count... news_news" />
+            <marker date="1519747262325" expanded="true" signature="3304:3416" ph="insert into news_news... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/news/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="41" column="23" lean-forward="false" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+        <state relative-caret-position="837">
+          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tools/NewsSpider/sites/ofweek.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding>
+            <marker date="1519747262470" expanded="true" signature="2034:2081" ph="select count... news_news" />
+            <marker date="1519747262470" expanded="true" signature="2371:2436" ph="insert into news_news... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tools/NewsSpider/sites/policy_of_gaoxin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="137" column="0" lean-forward="true" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+        <state relative-caret-position="405">
+          <caret line="18" column="7" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
           <folding>
-            <element signature="e#364#379#0" expanded="true" />
-            <marker date="1519745020786" expanded="true" signature="2406:2454" ph="select count... news_gov_msg" />
-            <marker date="1519745020786" expanded="true" signature="2680:2821" ph="INSERT INTO news_gov_msg... " />
-            <marker date="1519745020786" expanded="true" signature="2691:2821" ph="insert into news_gov_msg... " />
-            <marker date="1519745020786" expanded="true" signature="3604:3669" ph="select count... news_file" />
-            <marker date="1519745020786" expanded="true" signature="3604:3673" ph="select count... news_file" />
-            <marker date="1519745020786" expanded="true" signature="3604:3698" ph="select count... news_file" />
-            <marker date="1519745020786" expanded="true" signature="3970:4046" ph="INSERT INTO news_file... " />
-            <marker date="1519745020786" expanded="true" signature="4699:4749" ph="select count... news_file" />
-            <marker date="1519745020786" expanded="true" signature="5070:5146" ph="INSERT INTO news_file... " />
-            <marker date="1519745020786" expanded="true" signature="5081:5091" ph="insert into news_file... " />
+            <marker date="1519747262430" expanded="true" signature="2408:2456" ph="select count... news_gov_msg" />
+            <marker date="1519747262430" expanded="true" signature="2682:2823" ph="INSERT INTO news_gov_msg... " />
+            <marker date="1519747262430" expanded="true" signature="2693:2823" ph="insert into news_gov_msg... " />
+            <marker date="1519747262430" expanded="true" signature="3606:3671" ph="select count... news_file" />
+            <marker date="1519747262430" expanded="true" signature="3606:3675" ph="select count... news_file" />
+            <marker date="1519747262430" expanded="true" signature="3606:3700" ph="select count... news_file" />
+            <marker date="1519747262430" expanded="true" signature="3972:4048" ph="INSERT INTO news_file... " />
+            <marker date="1519747262430" expanded="true" signature="4701:4751" ph="select count... news_file" />
+            <marker date="1519747262430" expanded="true" signature="5072:5148" ph="INSERT INTO news_file... " />
+            <marker date="1519747262430" expanded="true" signature="5083:5093" ph="insert into news_file... " />
           </folding>
         </state>
       </provider>

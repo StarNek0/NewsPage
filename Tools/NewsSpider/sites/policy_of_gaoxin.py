@@ -16,7 +16,7 @@ import pymysql
 
 from lxml import etree
 
-from company import COM, GOV
+from ..company import COM, GOV
 
 
 def get_urls(in_url):

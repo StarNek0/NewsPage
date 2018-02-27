@@ -17,7 +17,7 @@ import pymysql
 
 from lxml import etree
 
-from company import COM,GOV
+from ..company import COM,GOV
 
 key_words_of_gov = GOV
 
