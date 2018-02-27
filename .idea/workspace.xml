@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20195871-4be7-4e61-9838-fb0f7c39c7de" name="Default" comment="完成对">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/news/migrations/0002_auto_20180227_2230.py" />
+    <list default="true" id="20195871-4be7-4e61-9838-fb0f7c39c7de" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Tools/NewsSpider/sites/chromedriver.exe" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Tools/NewsSpider/sites/policy_of_gaoxin.py" afterPath="$PROJECT_DIR$/Tools/NewsSpider/sites/policy_of_gaoxin.py" />
-      <change beforePath="$PROJECT_DIR$/news/models.py" afterPath="$PROJECT_DIR$/news/models.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -328,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519739774618</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="完成对项目申报文件的爬取">
+      <created>1519745194663</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1519745194663</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -377,7 +380,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修复" />
     <MESSAGE value="scrapy" />
-    <option name="LAST_COMMIT_MESSAGE" value="scrapy" />
+    <MESSAGE value="完成对项目申报文件的爬取" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成对项目申报文件的爬取" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
