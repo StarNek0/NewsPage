@@ -15,7 +15,9 @@ import pymysql
 
 from lxml import etree
 
-from ..company import COM
+import sys
+sys.path.append('../')
+from company import COM
 
 DATE = ''
 
