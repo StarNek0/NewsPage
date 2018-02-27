@@ -17,9 +17,9 @@ import pymysql
 
 from lxml import etree
 
-from company import COM
+from company import COM,GOV
 
-key_words = [u'工信部', u'发改委', u'标准委', u'国务院', u'办公厅', u'科技部', u'版权局', u'运输部', u'卫计委', u'邮政局']
+key_words_of_gov = GOV
 
 
 def output_urls(in_urls):
@@ -79,7 +79,7 @@ def get_pages(page_urls):
                 if whole_page[0:55].find(company)>0:
                     page_type=2
 
-            for key_word in key_words:
+            for key_word in key_words_of_gov:
                 if whole_page[0:55].find(key_word)>0:
                     print key_word, '---', whole_page[0:55]
                     page_type=4
