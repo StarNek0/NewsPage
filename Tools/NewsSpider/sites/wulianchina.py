@@ -83,29 +83,19 @@ def get_pages(page_urls):
                 if whole_page[0:55].find(key_word)>0:
                     print key_word, '---', whole_page[0:55]
                     page_type=4
-<<<<<<< HEAD
-	    
-	    cur = db.cursor()
-	    sql = "select count(*) from news_news where theme='%s'" % theme
-=======
+
 
             cur = db.cursor()
             sql = "select count(*) from news_news where theme='%s'" % theme
->>>>>>> 79742152dcbd58913836f98dcd8882aca1e684b3
             cur.execute(sql)
             res = cur.fetchone()[0]
             if res:
                 print res
                 cur.close()
                 continue
-<<<<<<< HEAD
-	    	    
-            sql = "insert into news_news(source_site,content,source_url,page_date,tag,theme) values('%s','%s','%s','%s','%s', '%s')" % (from_site, whole_page, page_url, page_date, dic[page_type], theme)
-            
-=======
+
 
             sql = "insert into news_news(source_site,content,source_url,page_date,tag,theme) values('%s','%s','%s','%s','%s', '%s')" % (from_site, whole_page, page_url, page_date, dic[page_type], theme)
->>>>>>> 79742152dcbd58913836f98dcd8882aca1e684b3
             cur.execute(sql)
 
             db.commit()
