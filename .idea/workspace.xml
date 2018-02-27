@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20195871-4be7-4e61-9838-fb0f7c39c7de" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Tools/NewsSpider/sites/chromedriver.exe" />
+    <list default="true" id="20195871-4be7-4e61-9838-fb0f7c39c7de" name="Default" comment="完成对">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/news/migrations/0002_auto_20180227_2230.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Tools/NewsSpider/company.py" afterPath="$PROJECT_DIR$/Tools/NewsSpider/company.py" />
+      <change beforePath="$PROJECT_DIR$/Tools/NewsSpider/sites/chromedriver.exe" afterPath="" />
       <change beforePath="$PROJECT_DIR$/Tools/NewsSpider/sites/policy_of_gaoxin.py" afterPath="$PROJECT_DIR$/Tools/NewsSpider/sites/policy_of_gaoxin.py" />
-      <change beforePath="$PROJECT_DIR$/Tools/NewsSpider/sites/wulianchina.py" afterPath="$PROJECT_DIR$/Tools/NewsSpider/sites/wulianchina.py" />
+      <change beforePath="$PROJECT_DIR$/news/models.py" afterPath="$PROJECT_DIR$/news/models.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,7 +17,19 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/NewsPage$policy_of_gaoxin.coverage" NAME="policy_of_gaoxin Coverage Results" MODIFIED="1519739563611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tools/NewsSpider/sites" />
+    <SUITE FILE_PATH="coverage/NewsPage$policy_of_gaoxin.coverage" NAME="policy_of_gaoxin Coverage Results" MODIFIED="1519744454740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tools/NewsSpider/sites" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand />
+    <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
@@ -26,11 +39,31 @@
       <file leaf-file-name="policy_of_gaoxin.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tools/NewsSpider/sites/policy_of_gaoxin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+            <state relative-caret-position="367">
+              <caret line="137" column="0" lean-forward="true" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
               <folding>
                 <element signature="e#364#379#0" expanded="true" />
+                <marker date="1519745020786" expanded="true" signature="2406:2454" ph="select count... news_gov_msg" />
+                <marker date="1519745020786" expanded="true" signature="2680:2821" ph="INSERT INTO news_gov_msg... " />
+                <marker date="1519745020786" expanded="true" signature="2691:2821" ph="insert into news_gov_msg... " />
+                <marker date="1519745020786" expanded="true" signature="3604:3669" ph="select count... news_file" />
+                <marker date="1519745020786" expanded="true" signature="3604:3673" ph="select count... news_file" />
+                <marker date="1519745020786" expanded="true" signature="3604:3698" ph="select count... news_file" />
+                <marker date="1519745020786" expanded="true" signature="3970:4046" ph="INSERT INTO news_file... " />
+                <marker date="1519745020786" expanded="true" signature="4699:4749" ph="select count... news_file" />
+                <marker date="1519745020786" expanded="true" signature="5070:5146" ph="INSERT INTO news_file... " />
+                <marker date="1519745020786" expanded="true" signature="5081:5091" ph="insert into news_file... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/news/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="41" column="23" lean-forward="false" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -38,8 +71,8 @@
       <file leaf-file-name="wulianchina.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tools/NewsSpider/sites/wulianchina.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-756">
-              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="88" column="12" lean-forward="true" selection-start-line="88" selection-start-column="12" selection-end-line="94" selection-end-column="24" />
               <folding>
                 <element signature="e#399#414#0" expanded="true" />
                 <marker date="1519729574799" expanded="true" signature="3060:3107" ph="select count... news_news" />
@@ -76,6 +109,7 @@
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/Tools/NewsSpider/company.py" />
         <option value="$PROJECT_DIR$/Tools/NewsSpider/sites/wulianchina.py" />
+        <option value="$PROJECT_DIR$/news/models.py" />
         <option value="$PROJECT_DIR$/Tools/NewsSpider/sites/policy_of_gaoxin.py" />
       </list>
     </option>
@@ -158,6 +192,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="D:/Python_Projects/ArticleSpider" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -286,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519728583622</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="scrapy">
+      <created>1519739774617</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1519739774618</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -299,9 +341,10 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@NewsPage" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25375536" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -310,7 +353,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="manage.py@NewsPage" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -334,7 +376,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修复" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复" />
+    <MESSAGE value="scrapy" />
+    <option name="LAST_COMMIT_MESSAGE" value="scrapy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -349,6 +392,16 @@
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <element signature="e#364#379#0" expanded="true" />
+            <marker date="1519745020786" expanded="true" signature="2406:2454" ph="select count... news_gov_msg" />
+            <marker date="1519745020786" expanded="true" signature="2680:2821" ph="INSERT INTO news_gov_msg... " />
+            <marker date="1519745020786" expanded="true" signature="2691:2821" ph="insert into news_gov_msg... " />
+            <marker date="1519745020786" expanded="true" signature="3604:3669" ph="select count... news_file" />
+            <marker date="1519745020786" expanded="true" signature="3604:3673" ph="select count... news_file" />
+            <marker date="1519745020786" expanded="true" signature="3604:3698" ph="select count... news_file" />
+            <marker date="1519745020786" expanded="true" signature="3970:4046" ph="INSERT INTO news_file... " />
+            <marker date="1519745020786" expanded="true" signature="4699:4749" ph="select count... news_file" />
+            <marker date="1519745020786" expanded="true" signature="5070:5146" ph="INSERT INTO news_file... " />
+            <marker date="1519745020786" expanded="true" signature="5081:5091" ph="insert into news_file... " />
           </folding>
         </state>
       </provider>
@@ -379,13 +432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/news/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/news/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -404,6 +450,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -426,10 +473,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3e56ed73-ae82-4f8d-b5a8-4b1e72d66295/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Tools/NewsSpider/sites/wulianchina.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-756">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="88" column="12" lean-forward="true" selection-start-line="88" selection-start-column="12" selection-end-line="94" selection-end-column="24" />
           <folding>
             <element signature="e#399#414#0" expanded="true" />
             <marker date="1519729574799" expanded="true" signature="3060:3107" ph="select count... news_news" />
@@ -438,12 +493,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/news/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="41" column="23" lean-forward="false" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Tools/NewsSpider/sites/policy_of_gaoxin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+        <state relative-caret-position="367">
+          <caret line="137" column="0" lean-forward="true" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
           <folding>
             <element signature="e#364#379#0" expanded="true" />
+            <marker date="1519745020786" expanded="true" signature="2406:2454" ph="select count... news_gov_msg" />
+            <marker date="1519745020786" expanded="true" signature="2680:2821" ph="INSERT INTO news_gov_msg... " />
+            <marker date="1519745020786" expanded="true" signature="2691:2821" ph="insert into news_gov_msg... " />
+            <marker date="1519745020786" expanded="true" signature="3604:3669" ph="select count... news_file" />
+            <marker date="1519745020786" expanded="true" signature="3604:3673" ph="select count... news_file" />
+            <marker date="1519745020786" expanded="true" signature="3604:3698" ph="select count... news_file" />
+            <marker date="1519745020786" expanded="true" signature="3970:4046" ph="INSERT INTO news_file... " />
+            <marker date="1519745020786" expanded="true" signature="4699:4749" ph="select count... news_file" />
+            <marker date="1519745020786" expanded="true" signature="5070:5146" ph="INSERT INTO news_file... " />
+            <marker date="1519745020786" expanded="true" signature="5081:5091" ph="insert into news_file... " />
           </folding>
         </state>
       </provider>
