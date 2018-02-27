@@ -15,11 +15,11 @@ class NewsView(View):
         front_date=time.strftime('%Y-%m-%d', time.localtime(DATE_Stamp-24*3600))
         behind_date=time.strftime('%Y-%m-%d', time.localtime(DATE_Stamp+24*3600))
         
-        News_pages = news.objects.filter(page_date=date, tag=u'资讯')
-        Policy_pages = news.objects.filter(page_date=date, tag=u'政策')
-        Company_pages = news.objects.filter(page_date=date, tag=u'企业')
-        ChanYe_pages = news.objects.filter(page_date=date, tag=u'产业')
-        YingYong_pages = news.objects.filter(page_date=date, tag=u'应用')
+        News_pages = news.objects.filter(page_date=date, tag=u'资讯').order_by('-score')
+        Policy_pages = news.objects.filter(page_date=date, tag=u'政策').order_by('-score')
+        Company_pages = news.objects.filter(page_date=date, tag=u'企业').order_by('-score')
+        ChanYe_pages = news.objects.filter(page_date=date, tag=u'产业').order_by('-score')
+        YingYong_pages = news.objects.filter(page_date=date, tag=u'应用').order_by('-score')
 
         return render(request, 'index.html', {
             'News_pages':News_pages,

@@ -5496,12 +5496,18 @@
                                 <section style="padding:18px 16px 16px 35px;">
                                     <section class="" style="white-space: normal;color: rgb(62, 62, 62);">
                                         {% for News in News_pages %}
+                                            {% if News.score > 51 %}
                                             <p style="text-indent: 2em;line-height: 1.75em;"><span
                                                     style="color: rgb(0, 0, 0);font-family: 楷体, 楷体_GB2312, SimKai;font-size: 14px;"><span
                                                     style="font-family: 楷体, 楷体_GB2312, SimKai;font-size: 14px;text-indent: 32px;background-color: rgb(230, 230, 230);">{{ forloop.counter }}、{{ News.theme }}
                                                     {% ifequal News.source_site  None %}{% else %}——&lt;{{ News.source_site }}&gt;{% endifequal %}</span></span>
 
                                             </p>
+                                            {% endif %}
+                                            {% empty %}
+                                            <p style="text-indent: 2em;line-height: 1.75em;"><span style="color: rgb(0, 0, 0);font-family: 楷体, 楷体_GB2312,SimKai;font-size: 14px;"><span
+                                                    style="font-family: 楷体, 楷体_GB2312, SimKai;font-size: 14px;text-indent: 32px;background-color: rgb(230, 230, 230);">暂无数据</span></span>
+
                                         {% endfor %}
                                     </section>
                                 </section>
@@ -5544,9 +5550,14 @@
                                                         <section
                                                                 style="margin-top: 0.5em;font-size: 0.875em;line-height: 2em;letter-spacing: 2px;color: rgb(211, 42, 99);">
                                                             {% for Policy_page in Policy_pages %}
+                                                                {% if Policy_page.score > 51 %}
                                                                 <p style="text-indent: 2em;line-height: 1.75em;"><span
                                                                         style="font-family: 楷体, 楷体_GB2312, SimKai;font-size: 14px;">{{ forloop.counter }}、{{ Policy_page.theme }}
-                                                                </p>
+                                                                </span></p>
+                                                                {% endif %}
+                                                                {% empty %}
+                                            <p style="text-indent: 2em;line-height: 1.75em;"><span style="color: rgb(0, 0, 0);font-family: 楷体, 楷体_GB2312,SimKai;font-size: 14px;"><span
+                                                    style="font-family: 楷体, 楷体_GB2312, SimKai;font-size: 14px;text-indent: 32px;background-color: rgb(230, 230, 230);">暂无数据</span></span>
                                                             {% endfor %}
                                                         </section>
                                                     </section>
@@ -5581,9 +5592,14 @@
                                                         <section
                                                                 style="margin-top: 0.5em;font-size: 0.875em;line-height: 2em;letter-spacing: 2px;color: rgb(211, 42, 99);">
                                                             {% for YingYong_page in YingYong_pages %}
+                                                                {% if YingYong_page.score > 51 %}
                                                                 <p style="text-indent: 2em;line-height: 1.75em;"><span
                                                                         style="font-family: 楷体, 楷体_GB2312, SimKai;font-size: 14px;">{{ forloop.counter }}、{{ YingYong_page.theme }}{% ifequal YingYong_page.source_site None %}{% else %}——&lt;{{ YingYong_page.source_site }}&gt;{% endifequal %}</span>
                                                                 </p>
+                                                                {% endif %}
+                                                                {% empty %}
+                                            <p style="text-indent: 2em;line-height: 1.75em;"><span style="color: rgb(0, 0, 0);font-family: 楷体, 楷体_GB2312,SimKai;font-size: 14px;"><span
+                                                    style="font-family: 楷体, 楷体_GB2312, SimKai;font-size: 14px;text-indent: 32px;background-color: rgb(230, 230, 230);">暂无数据</span></span>
                                                             {% endfor %}
                                                         </section>
                                                     </section>
@@ -5618,9 +5634,14 @@
                                                             <section
                                                                     style="margin-top: 0.5em;font-size: 0.875em;line-height: 2em;letter-spacing: 2px;color: rgb(211, 42, 99);">
                                                                 {% for ChanYe_page in ChanYe_pages %}
+                                                                    {% if ChanYe_page.score > 51 %}
                                                                     <p style="text-indent: 2em;line-height: 1.75em;"><span
                                                                             style="font-family: 楷体, 楷体_GB2312, SimKai;font-size: 14px;">{{ forloop.counter }}、{{ ChanYe_page.theme }}</span>
                                                                     </p>
+                                                                    {% endif %}
+                                                                    {% empty %}
+                                            <p style="text-indent: 2em;line-height: 1.75em;"><span style="color: rgb(0, 0, 0);font-family: 楷体, 楷体_GB2312,SimKai;font-size: 14px;"><span
+                                                    style="font-family: 楷体, 楷体_GB2312, SimKai;font-size: 14px;text-indent: 32px;background-color: rgb(230, 230, 230);">暂无数据</span></span>
                                                                 {% endfor %}
                                                             </section>
                                                         </section>
@@ -5642,9 +5663,14 @@
                                     <section style="padding:18px 16px 16px 35px;">
                                         <section class="" style="white-space: normal;color: rgb(62, 62, 62);">
                                             {% for Company_page in Company_pages %}
+                                                {% if Company_page.score > 51 %}
                                                 <p style="text-indent: 2em;line-height: 1.75em;"><span
                                                         style="color: rgb(0, 0, 0);font-family: 楷体, 楷体_GB2312, SimKai;font-size: 14px;">{{ forloop.counter }}、{{ Company_page.theme }}{% ifequal Company_page.source_site None %}{% else %}——&lt;{{ Company_page.source_site }}&gt;{% endifequal %}</span>
                                                 </p>
+                                                {% endif %}
+                                                {% empty %}
+                                            <p style="text-indent: 2em;line-height: 1.75em;"><span style="color: rgb(0, 0, 0);font-family: 楷体, 楷体_GB2312,SimKai;font-size: 14px;"><span
+                                                    style="font-family: 楷体, 楷体_GB2312, SimKai;font-size: 14px;text-indent: 32px;background-color: rgb(230, 230, 230);">暂无数据</span></span>
                                             {% endfor %}
                                         </section>
                                     </section>
