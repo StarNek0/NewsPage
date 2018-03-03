@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    项目申报 - 首页
+{% endblock %}
+
+{% block custom_bread %}
+    <section>
+        <div class="wp">
+            <ul class="crumbs">
+                <li><a href="">首页</a>></li>
+                <li>项目申报</li>
+            </ul>
+        </div>
+    </section>
+{% endblock %}
+
+{% block content %}
+    <section>
+        <div class="wp butler_list_box list">
+            <div class='left' style="width: 1200px">
+                <div class="listoptions">
+                    <ul>
+                        <li>
+                            <h2>来源</h2>
+                            <div class="cont">
+                                <a href="?ct="><span
+                                        class="{% if not category %}active2{% endif %}">全部</span></a>
+
+                                <a href="?ct=成都高新区"><span class="{% ifequal category '成都高新区' %}active2{% endifequal %}">成都高新区</span></a>
+                                <a href="?ct=成都科技局"><span class="{% ifequal category '成都科技局' %}active2{% endifequal %}">成都科技局</span></a>
+                            </div>
+                        </li>
+{#                        <li>#}
+{#                            <h2>所在地区</h2>#}
+{#                            <div class="more">更多</div>#}
+{#                            <div class="cont">#}
+{#                                <a href="?ct={{ category }}"><span#}
+{#                                        class="{% if not city_id %}active2{% endif %}">全部</span></a>#}
+{#                                {% for city in all_citys %}#}
+{#                                    <a href="?city={{ city.id }}&ct={{ category }}"><span#}
+{#                                            class="{% ifequal city_id city.id|stringformat:'i' %}active2{% endifequal %}">{{ city.name }}</span></a>#}
+{#                                {% endfor %}#}
+{#                            </div>#}
+{#                        </li>#}
+                    </ul>
+                </div>
+
+                <div class="all">共<span class="key"></span>家</div>
+                <div class="butler_list company list" style="width: 1200px">
+
+                    <div class="layout">
+                        <div class="head">
+                            <ul class="tab_header">
+                                <li class="{% if not sort %}active{% endif %}"><a href="?ct=&city=">全部</a></li>
+                                <li class="{% ifequal sort 'students' %}active{% endifequal %}"><a
+                                        href="?sort=students&ct={{ category }}&city={{ city_id }}">学习人数 &#8595;</a></li>
+                                <li class="{% ifequal sort 'courses' %}active{% endifequal %}"><a
+                                        href="?sort=courses&ct={{ category }}&city={{ city_id }}">课程数 &#8595;</a></li>
+                            </ul>
+                        </div>
+                        {#这里开始放置课程信息#}
+                        {% for all_project in all_projects.object_list %}
+                            <dl class="des difdes" style="width: 1158px !important;">
+                                <div>
+                                <span style="width: 1100px !important;float: left;margin-left: 20px;margin-top: 20px">
+{#                                    <div class="clearfix">#}
+                                        <a href="{{ all_project.url }}">
+                                            <h1>{{ all_project.title }}</h1>
+
+                                        </a>
+{#                                    </div>#}
+                                </span>
+                                    </div>
+                                <div>
+                                <dd style="float: left;margin-top: 20px">
+                                    <ul class="cont">
+                                        <li class="first">
+                                            <p class="pic9">发布日期：<span>{{ all_project.msg_date }}</span></p>
+                                            <p class="pic9">截止日期：<span></span></p>
+                                        </li>
+                                        <li class="first">
+                                            <p class="c7">发布网站：<span>{{ all_project.site_from }}</span></p>
+                                            <p class="c7">来源单位：<span>{{ all_project.msg_from }}</span></p>
+
+                                        </li>
+                                    </ul>
+                                </dd>
+                                    </div>
+                            </dl>
+                        {% endfor %}
+
+
+                    </div>
+                    <div class="pageturn">
+                        <ul class="pagelist">
+                            {% if all_projects.has_previous %}
+                                <li class="long"><a href="?{{ all_projects.previous_page_number.querystring }}">上一页</a></li>
+                            {% endif %}
+
+                            {% for page in all_projects.pages %}
+                                {% if page %}
+                                    {% ifequal page all_projects.number %}
+                                        <li class="active"><a href="?{{ page.querystring }}">{{ page }}</a></li>
+                                    {% else %}
+                                        <li><a href="?{{ page.querystring }}" class="page">{{ page }}</a></li>
+                                    {% endifequal %}
+                                {% else %}
+                                    <li class="none"><a href="" class="page">...</a></li>
+                                {% endif %}
+                            {% endfor %}
+
+                            {% if all_projects.has_next %}
+                                <li class="long"><a href="?{{ all_projects.next_page_number.querystring }}">下一页</a></li>
+                            {% endif %}
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+{% endblock %}

@@ -1,3 +1,4 @@
+# coding:utf8
 """
 Django settings for NewsPage project.
 
@@ -129,3 +130,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # 这里只能有一个路径是因为，这是存储路径，而非读取路径

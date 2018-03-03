@@ -2,8 +2,9 @@
 import time
 from django.shortcuts import render
 from django.views.generic.base import View
+from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
 # Create your views here.
-from .models import news
+from .models import news,GOV_MSG,FILE
 
 
 class NewsView(View):
@@ -33,4 +34,51 @@ class NewsView(View):
 
             'front_date':front_date,
             'behind_date':behind_date,
+        })
+
+
+class ProjectView(View):
+
+    def get(self, request):
+        all_projects = GOV_MSG.objects.all()
+
+        # hot_orgs = all_orgs.order_by('-click_num')[:3]
+
+
+        # 搜索功能
+        # search_keywords = request.GET.get('keywords', '')
+        # if search_keywords:
+        #     all_orgs = all_orgs.filter(
+        #         Q(name__icontains=search_keywords) | Q(desc__icontains=search_keywords))  # i是不区分大小写
+
+        # 城市筛选
+        # city_id = request.GET.get('city', "")
+        # if city_id:
+        #     all_orgs = all_orgs.filter(city_id=int(city_id))
+
+        # 机构类别筛选
+        category = request.GET.get('ct', '')
+        if category:
+            all_projects = all_projects.filter(site_from=category)
+
+        # sort = request.GET.get('sort', "")
+        # if sort:
+        #     if sort == "students":
+        #         all_orgs = all_orgs.order_by('-students')
+        #     elif sort == "courses":
+        #         all_orgs = all_orgs.order_by('-course_nums')
+        #
+        # org_nums = all_orgs.count()  # 课程总数
+
+        # 对课程机构进行分页
+        try:
+            page = request.GET.get('page', 1)
+        except PageNotAnInteger:
+            page = 1
+        p = Paginator(all_projects, 5, request=request)
+        all_projects = p.page(page)
+
+        return render(request, 'project-list.html', {
+            'all_projects': all_projects,
+            'category': category,
         })

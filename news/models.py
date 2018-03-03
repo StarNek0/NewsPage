@@ -24,9 +24,11 @@ class news(models.Model):
 
 class GOV_MSG(models.Model):
     title = models.CharField(max_length=255, verbose_name="标题")
-    url = models.CharField(max_length=255, verbose_name="URL")
-    msg_from = models.CharField(max_length=255, verbose_name="来源")
-    msg_date = models.CharField(max_length=255, verbose_name="发布日期")
+    url = models.CharField(max_length=255, verbose_name="URL", null=True)
+    msg_from = models.CharField(max_length=255, verbose_name="来源单位", null=True)
+    site_from = models.CharField(max_length=255, verbose_name="来源网站", null=True)
+    msg_date = models.CharField(max_length=255, verbose_name="发布日期", null=True)
+    msg_end_date = models.CharField(max_length=255, verbose_name="截止日期", null=True)
     whole_content = models.TextField(verbose_name="全文", null=True, blank=True)
     main_content = models.TextField(verbose_name="正文", null=True, blank=True)
     end_content = models.TextField(verbose_name="落款", null=True, blank=True)

@@ -6,7 +6,7 @@
     Date:   2018/2/27 18:34
     Sys:    Windows 10
 --------------------------------------------------------------------------
-    Desc:   
+    Desc:   成都高新区项目申报爬虫
 --------------------------------------------------------------------------
 """
 import requests
@@ -72,8 +72,8 @@ def get_each_gov_msg(every_page_url):
             cur.close()
         else:
             # 入库爬到的数据
-            sql = "INSERT INTO news_gov_msg(title, url, msg_from, msg_date, whole_content, main_content, end_content) VALUES('%s','%s','%s','%s','%s','%s','%s')" % (
-            title, each_page_url, re.search(u'来源:(.+)',from_gov).groups(1)[0], date, total_content.strip(), main_content, end_content)
+            sql = "INSERT INTO news_gov_msg(title, url, msg_from, msg_date, whole_content, main_content, end_content, site_from) VALUES('%s','%s','%s','%s','%s','%s','%s','%s')" % (
+            title, each_page_url, re.search(u'来源:(.+)',from_gov).groups(1)[0], date, total_content.strip(), main_content, end_content, u'成都高新区')
             cur.execute(sql)
             db.commit()
             cur.close()

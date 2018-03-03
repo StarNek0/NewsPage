@@ -16,10 +16,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from news.views import NewsView
+from news.views import NewsView, ProjectView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', NewsView.as_view(), name='datenews'),
     url(r'^(?P<date>.*)/$', NewsView.as_view(), name='news'),
+    url(r'^projects$', ProjectView.as_view(), name='projects')
 ]
