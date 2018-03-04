@@ -286,8 +286,8 @@
     }
 
     .rich_media_meta_list {
-        margin-bottom: 18px;
-        line-height: 20px;
+        margin-bottom: 0px;
+        line-height: 15px;
         font-size: 0
     }
 
@@ -5452,10 +5452,7 @@
 
                     <em class="rich_media_meta rich_media_meta_text">CDIIDA 成都物联网产业发展联盟</em>
 
-                    <a class="rich_media_meta"
-                       href="{% url 'news' front_date %}">前一天</a>
-                    <a class="rich_media_meta"
-                       href="{% url 'news' behind_date %}">后一天</a>
+
 
 
                     <div id="js_profile_qrcode" class="profile_container" style="display:none;">
@@ -5482,6 +5479,14 @@
                         </span>
                     </div>
                 </div>
+            <div id="meta_content" class="rich_media_meta_list">
+                <a class="rich_media_meta" style="font-weight: bolder"
+                       href="{% url 'projects' %}">项目申报</a>
+                    <a class="rich_media_meta"
+                       href="{% url 'news' front_date %}">前一天</a>
+                    <a class="rich_media_meta"
+                       href="{% url 'news' behind_date %}">后一天</a>
+            </div>
 
 
                 <div class="rich_media_content " id="js_content">
