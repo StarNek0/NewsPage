@@ -28,7 +28,7 @@ class GOV_MSG(models.Model):
     msg_from = models.CharField(max_length=255, verbose_name="来源单位", null=True)
     site_from = models.CharField(max_length=255, verbose_name="来源网站", null=True)
     msg_date = models.CharField(max_length=255, verbose_name="发布日期", null=True)
-    float_date = models.FloatField(max_length=255, verbose_name="时间戳", null=True)
+    float_date = models.FloatField(max_length=255, verbose_name="时间戳", null=True,default=0)
     msg_end_date = models.CharField(max_length=255, verbose_name="截止日期", null=True)
     whole_content = models.TextField(verbose_name="全文", null=True, blank=True)
     main_content = models.TextField(verbose_name="正文", null=True, blank=True)

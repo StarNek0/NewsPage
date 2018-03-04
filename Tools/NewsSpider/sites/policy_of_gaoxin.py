@@ -29,6 +29,7 @@ def get_urls(in_url):
     # 获取该搜索结果的页数
     temp_text = root.xpath('//div[@class="text-center pagin mt20 pb20"]/div/text()')[0]
     index_num = int(re.search(u'/(\d+)页', temp_text).group(1))
+    index_num = 3
     # 从每页获取每个标题的URL并存入urls中
     for i in range(1, index_num + 1):
         thispage_url = in_url.replace('/index.jhtml', '/index_%d.jhtml' % i)
