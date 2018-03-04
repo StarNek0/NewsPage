@@ -133,7 +133,7 @@ def get_each_gov_msg(every_page_url):
         #     browser.quit()
     db.close()
 
-if __name__ == '__main__':
+def main():
     url = u'http://www.cdht.gov.cn/jbxxgk/index.jhtml?title=%E7%94%B3%E6%8A%A5'
     every_page_url = get_urls(url)
     # every_page_url = ['http://www.cdht.gov.cn/zwgktzgg/139755.jhtml']
