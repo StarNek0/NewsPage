@@ -17,10 +17,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from news.views import NewsView, ProjectView
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', NewsView.as_view(), name='datenews'),
     url(r'^(?P<date>.*)/$', NewsView.as_view(), name='news'),
-    url(r'^projects$', ProjectView.as_view(), name='projects')
+    url(r'^projects$', ProjectView.as_view(), name='projects'),
+    url(r'^favicon.ico$',RedirectView.as_view(url=r'static/images/favicon.ico')),
 ]

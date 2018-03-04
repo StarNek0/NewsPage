@@ -403,7 +403,7 @@ caption {
 
 /*header*/
 .headerwrap {
-    height: 192px;
+    height: 182px;
     width: 100%;
 }
 
@@ -1376,7 +1376,7 @@ textarea:focus {
 /*#search_type{height: 37px;line-height: 37px;width: 90px !important;}*/
 /*header nav*/
 .header .nav {
-    background: #717171;
+    background: #4876FF;
     height: 38px;
     font-size: 14px;
     width: 100%;
@@ -1399,7 +1399,7 @@ textarea:focus {
 }
 
 .header .nav a:hover, .header .nav .active {
-    background: #3D9328;
+    background: #009ACD;
 }
 
 .header .nav li:last-child a {
@@ -1990,7 +1990,9 @@ textarea:focus {
 }
 
 .active2 {
-    color: #3d9328 !important;
+    color: #3B3B3B !important;
+    font-weight: bolder;
+    font-size: larger;
 }
 
 .module1 .imgslide2 {
@@ -2444,7 +2446,7 @@ textarea:focus {
 }
 
 footer .footer {
-    background: #3a3a3a;
+    background: #4876FF;
     height: 300px;
     padding: 15px;
     color: #717171;
@@ -3392,7 +3394,7 @@ footer .footer .line {
 }
 
 .butler_list h1 {
-    font-size: 24px;
+    font-size: 21px;
     color: #464646;
     line-height: 28px;
 }

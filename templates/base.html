@@ -45,9 +45,9 @@
                     <div class="wp">
                         <ul>
                             <li class="active" ><a
-                                    href="">首页</a>
+                                    href="">项目申报</a>
                             </li>
-
+                            <li><a href="{% url 'datenews' %}" target="_blank">天府快讯</a></li>
                         </ul>
                     </div>
                 </div>
@@ -71,31 +71,25 @@
 {% endblock %}
 
 <footer>
-    <div class="footer">
+    <div class="footer" style="height: 20px">
         <div class="wp">
-            <ul class="cont">
-                <li class="logo"><a href=""><img src="{% static 'images/footlogo.png' %}"/></a></li>
-                <li class="code"><img src="{% static 'images/code.jpg' %}"/>
-                    <p class="center">扫描关注微信</p></li>
-                <li class="third"><img class="fl" src="{% static 'images/tell.png' %}"/>
-                    <p class="tell">33333333</p>
-                    <p class="time">周一至周日 9:00-18:00</p></li>
-            </ul>
-
-        </div>
-        <p class="line"></p>
+{#            <ul class="cont">#}
+{#                <li class="logo"><a href=""><img src="{% static 'images/logo.png' %}"/></a></li>#}
+{##}
+{#                <li class="third"><img class="fl" src="{% static 'images/tell.png' %}"/>#}
+{#                    <p class="tell">33333333</p>#}
+{#            </ul>#}
+{##}
+{#        </div>#}
+{#        <p class="line"></p>#}
         <div class="wp clear">
-            <span class="fl">? 2016 www.projectsedu.com 极慕客-在线学习交流平台 保留所有权利</span>
-            <span class="fr">copyright ? 2016 ICP备案证书号：蜀ICP备xxxxx号-1</span>
+            <span class="fr" style="color: #ffffff;">copyright ? 2016 ICP备案证书号：蜀ICP备xxxxx号-1</span>
         </div>
     </div>
 </footer>
 
 <section>
     <ul class="sidebar">
-{#        <li class="qq">#}
-{#            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2023525077&site=qq&menu=yes"></a>#}
-{#        </li>#}
         <li class="totop"></li>
     </ul>
 </section>
@@ -111,9 +105,9 @@
 {% block custom_js %}{% endblock %}
 
 <script type="text/javascript" src="{% static 'js/plugins/jquery.raty.js' %}"></script>
-<script type="text/javascript">
-    //收藏分享
-//收藏分享
+{#<script type="text/javascript">#}
+{#    //收藏分享#}
+{#//收藏分享#}
 {#function add_fav(current_elem, fav_id, fav_type){#}
 {#    $.ajax({#}
 {#        cache: false,#}
@@ -137,74 +131,74 @@
 {#            }#}
 {#        },#}
 {#    });#}
-{#}#}
+{# }#}
+{##}
+{#$('.collectionbtn').on('click', function(){#}
+{#    add_fav($(this), {{ course_org.id }}, 2);#}
+{# });#}
+{##}
+{#$(function(){#}
+{#    var $precision = $('.precision'),#}
+{#        score = $precision.attr('data-star-scope'),#}
+{#        option =  {#}
+{#                    half		: true,#}
+{#                    path		: '{% static 'images/' %}',#}
+{#                    precision	: true,#}
+{#                    size		: 24,#}
+{#                    starOff		: 'g_star.png',#}
+{#                    starOn		: 'r_star.png',#}
+{#                    starHalf	: 'h_star.png',#}
+{#                    hints       : ['极差', '差', '一般', '好评', '非常满意'],#}
+{#                    noRatedMsg  : '暂时还未获得评价！',#}
+{#                    readOnly    : true,#}
+{#                    score       : score#}
+{#                };#}
+{#    $precision.raty(option);#}
+{##}
+{#    $('.jsFavBtn').on('click', function(){#}
+{#        var type = $(this).attr('data-fav-type');#}
+{#        if(type == '1'){#}
+{#            favPraise($(this), 'fav' ,1 , '收藏');#}
+{##}
+{#        }else if(type == '3'){#}
+{#            favPraise($(this), 'fav' ,3 );#}
+{##}
+{#        }else if(type == '11'){#}
+{#            favPraise($(this), 'pra', 1);#}
+{##}
+{#        }else if(type == '4'){#}
+{#            favPraise($(this), 'fav' ,4 );#}
+{##}
+{#        }#}
+{#    });#}
+{# })#}
+{#</script>#}
 
-$('.collectionbtn').on('click', function(){
-    add_fav($(this), {{ course_org.id }}, 2);
-});
-
-$(function(){
-    var $precision = $('.precision'),
-        score = $precision.attr('data-star-scope'),
-        option =  {
-                    half		: true,
-                    path		: '{% static 'images/' %}',
-                    precision	: true,
-                    size		: 24,
-                    starOff		: 'g_star.png',
-                    starOn		: 'r_star.png',
-                    starHalf	: 'h_star.png',
-                    hints       : ['极差', '差', '一般', '好评', '非常满意'],
-                    noRatedMsg  : '暂时还未获得评价！',
-                    readOnly    : true,
-                    score       : score
-                };
-    $precision.raty(option);
-
-    $('.jsFavBtn').on('click', function(){
-        var type = $(this).attr('data-fav-type');
-        if(type == '1'){
-            favPraise($(this), 'fav' ,1 , '收藏');
-
-        }else if(type == '3'){
-            favPraise($(this), 'fav' ,3 );
-
-        }else if(type == '11'){
-            favPraise($(this), 'pra', 1);
-
-        }else if(type == '4'){
-            favPraise($(this), 'fav' ,4 );
-
-        }
-    });
-})
-</script>
-
-
-<script type="text/javascript">
-$(function() {
-    $('.recordbtn1').click(function(){
-        $('.recordbox1').show();
-    });
-    $('.recordbtn2').click(function(){
-        $('.recordbox2').show();
-    });
-
-    $('.imgslide').unslider({
-        speed: 500,               //  The speed to animate each slide (in milliseconds)
-        delay: 3000,              //  The delay between slide animations (in milliseconds)
-        complete: function() {},  //  A function that gets called after every slide animation
-        keys: true,               //  Enable keyboard (left, right) arrow shortcuts
-        dots: true,               //  Display dot navigation
-        fluid: false              //  Support responsive design. May break non-responsive designs
-    });
-    var unslider = $('.imgslide').unslider();
-    $('.unslider-arrow').click(function() {
-        var fn = this.className.split(' ')[1];
-        unslider.data('unslider')[fn]();
-    });
-});
-</script>
+{##}
+{#<script type="text/javascript">#}
+{#$(function() {#}
+{#    $('.recordbtn1').click(function(){#}
+{#        $('.recordbox1').show();#}
+{#    });#}
+{#    $('.recordbtn2').click(function(){#}
+{#        $('.recordbox2').show();#}
+{#    });#}
+{##}
+{#    $('.imgslide').unslider({#}
+{#        speed: 500,               //  The speed to animate each slide (in milliseconds)#}
+{#        delay: 3000,              //  The delay between slide animations (in milliseconds)#}
+{#        complete: function() {},  //  A function that gets called after every slide animation#}
+{#        keys: true,               //  Enable keyboard (left, right) arrow shortcuts#}
+{#        dots: true,               //  Display dot navigation#}
+{#        fluid: false              //  Support responsive design. May break non-responsive designs#}
+{#    });#}
+{#    var unslider = $('.imgslide').unslider();#}
+{#    $('.unslider-arrow').click(function() {#}
+{#        var fn = this.className.split(' ')[1];#}
+{#        unslider.data('unslider')[fn]();#}
+{#    });#}
+{# });#}
+{#</script>#}
 
 </body>
 </html>
