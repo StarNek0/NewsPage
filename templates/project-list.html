@@ -6,14 +6,14 @@
 {% endblock %}
 
 {% block custom_bread %}
-{#    <section>#}
-{#        <div class="wp">#}
-{#            <ul class="crumbs">#}
-{#                <li><a href="">首页</a>></li>#}
-{#                <li>项目申报</li>#}
-{#            </ul>#}
-{#        </div>#}
-{#    </section>#}
+    {#    <section>#}
+    {#        <div class="wp">#}
+    {#            <ul class="crumbs">#}
+    {#                <li><a href="">首页</a>></li>#}
+    {#                <li>项目申报</li>#}
+    {#            </ul>#}
+    {#        </div>#}
+    {#    </section>#}
 {% endblock %}
 
 {% block content %}
@@ -33,32 +33,36 @@
                                 <a href="?ct=成都经信委"><span class="{% ifequal category '成都经信委' %}active2{% endifequal %}">成都经信委</span></a>
                             </div>
                         </li>
-{#                        <li>#}
-{#                            <h2>所在地区</h2>#}
-{#                            <div class="more">更多</div>#}
-{#                            <div class="cont">#}
-{#                                <a href="?ct={{ category }}"><span#}
-{#                                        class="{% if not city_id %}active2{% endif %}">全部</span></a>#}
-{#                                {% for city in all_citys %}#}
-{#                                    <a href="?city={{ city.id }}&ct={{ category }}"><span#}
-{#                                            class="{% ifequal city_id city.id|stringformat:'i' %}active2{% endifequal %}">{{ city.name }}</span></a>#}
-{#                                {% endfor %}#}
-{#                            </div>#}
-{#                        </li>#}
+                        <li>
+                            <h2>日期筛选</h2>
+                            <div class="cont">
+                                <a href="?ct={{ category }}"><span
+                                        class="{% if not time_recent %}active2{% endif %}">全部</span></a>
+
+                                <a href="?ct={{ category }}&timerecent=threeday"><span
+                                        class="{% ifequal time_recent 'threeday' %}active2{% endifequal %}">三天内</span></a>
+                                <a href="?ct={{ category }}&timerecent=week"><span
+                                        class="{% ifequal time_recent 'week' %}active2{% endifequal %}">一周内</span></a>
+                                <a href="?ct={{ category }}&timerecent=month"><span
+                                        class="{% ifequal time_recent 'month' %}active2{% endifequal %}">一个月内</span></a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
 
-                <div class="all">共<span class="key"></span>项</div>
+                <div class="all">检索到 <span class="key">{{ proj_nums }}</span> 条数据</div>
                 <div class="butler_list company list" style="width: 1200px">
 
                     <div class="layout">
                         <div class="head">
                             <ul class="tab_header">
-                                <li class="{% if not sort %}active{% endif %}"><a href="?ct=&city=">全部</a></li>
-                                <li class="{% ifequal sort 'students' %}active{% endifequal %}"><a
-                                        href="?sort=students&ct={{ category }}&city={{ city_id }}">学习人数 &#8595;</a></li>
-                                <li class="{% ifequal sort 'courses' %}active{% endifequal %}"><a
-                                        href="?sort=courses&ct={{ category }}&city={{ city_id }}">课程数 &#8595;</a></li>
+                                <li class="{% if not time_order %}active{% endif %}"><a href="?ct={{ category }}">默认</a>
+                                </li>
+                                <li class="{% ifequal time_order 'time_down' %}active{% endifequal %}"><a
+                                        href="?ct={{ category }}&timeorder=time_down">时间降序 &#8595;</a></li>
+                                <li class="{% ifequal time_order 'time_up' %}active{% endifequal %}"><a
+                                        href="?ct={{ category }}&timeorder=time_up">时间升序 &#8593;</a></li>
+
                             </ul>
                         </div>
                         {#这里开始放置课程信息#}
@@ -73,22 +77,22 @@
                                         </a>
 {#                                    </div>#}
                                 </span>
-                                    </div>
+                                </div>
                                 <div>
-                                <dd style="float: left;margin-top: 20px">
-                                    <ul class="cont">
-                                        <li class="first">
-                                            <p class="pic9">发布日期：<span>{{ all_project.msg_date }}</span></p>
-                                            <p class="pic9">截止日期：<span></span></p>
-                                        </li>
-                                        <li class="first">
-                                            <p class="c7">发布网站：<span>{{ all_project.site_from }}</span></p>
-                                            <p class="c7">来源：<span>{{ all_project.msg_from }}</span></p>
+                                    <dd style="float: left;margin-top: 20px">
+                                        <ul class="cont">
+                                            <li class="first">
+                                                <p class="pic9">发布日期：<span>{{ all_project.msg_date }}</span></p>
+                                                <p class="pic9">截止日期：<span></span></p>
+                                            </li>
+                                            <li class="first">
+                                                <p class="c7">发布网站：<span>{{ all_project.site_from }}</span></p>
+                                                <p class="c7">来源：<span>{{ all_project.msg_from }}</span></p>
 
-                                        </li>
-                                    </ul>
-                                </dd>
-                                    </div>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </div>
                             </dl>
                         {% endfor %}
 
@@ -97,7 +101,8 @@
                     <div class="pageturn">
                         <ul class="pagelist">
                             {% if all_projects.has_previous %}
-                                <li class="long"><a href="?{{ all_projects.previous_page_number.querystring }}">上一页</a></li>
+                                <li class="long"><a href="?{{ all_projects.previous_page_number.querystring }}">上一页</a>
+                                </li>
                             {% endif %}
 
                             {% for page in all_projects.pages %}
