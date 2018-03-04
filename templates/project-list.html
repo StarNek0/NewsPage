@@ -23,13 +23,14 @@
                 <div class="listoptions">
                     <ul>
                         <li>
-                            <h2>信息来源</h2>
+                            <h2>信息源</h2>
                             <div class="cont">
                                 <a href="?ct="><span
                                         class="{% if not category %}active2{% endif %}">全部</span></a>
 
                                 <a href="?ct=成都高新区"><span class="{% ifequal category '成都高新区' %}active2{% endifequal %}">成都高新区</span></a>
                                 <a href="?ct=成都科技局"><span class="{% ifequal category '成都科技局' %}active2{% endifequal %}">成都科技局</span></a>
+                                <a href="?ct=成都经信委"><span class="{% ifequal category '成都经信委' %}active2{% endifequal %}">成都经信委</span></a>
                             </div>
                         </li>
 {#                        <li>#}
@@ -66,7 +67,7 @@
                                 <div>
                                 <span style="width: 1100px !important;float: left;margin-left: 20px;margin-top: 20px">
 {#                                    <div class="clearfix">#}
-                                        <a href="{{ all_project.url }}">
+                                        <a href="{{ all_project.url }}" target="_blank">
                                             <h1>{{ all_project.title }}</h1>
 
                                         </a>
@@ -82,7 +83,7 @@
                                         </li>
                                         <li class="first">
                                             <p class="c7">发布网站：<span>{{ all_project.site_from }}</span></p>
-                                            <p class="c7">来源单位：<span>{{ all_project.msg_from }}</span></p>
+                                            <p class="c7">来源：<span>{{ all_project.msg_from }}</span></p>
 
                                         </li>
                                     </ul>

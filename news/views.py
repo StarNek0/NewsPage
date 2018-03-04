@@ -7,6 +7,12 @@ from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
 from .models import news,GOV_MSG,FILE
 
 
+def DtCalc(stTime, edTime):
+    st = time.mktime(time.strptime(stTime, "%Y-%m-%d"))
+    ed = edTime
+
+    return int((ed - st) / (24 * 3600))  # 时间差/天
+
 class NewsView(View):
     def get(self, request, date=None):
         if date is None:
@@ -82,3 +88,4 @@ class ProjectView(View):
             'all_projects': all_projects,
             'category': category,
         })
+
