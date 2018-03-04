@@ -19,7 +19,7 @@
 {% block content %}
     <section>
         <div class="wp butler_list_box list">
-            <div class='left' style="width: 1200px">
+            <div class='left'>
                 <div class="listoptions">
                     <ul>
                         <li>
@@ -52,7 +52,7 @@
                 </div>
 
                 <div class="all">检索到 <span class="key">{{ proj_nums }}</span> 条数据</div>
-                <div class="butler_list company list" style="width: 1200px">
+                <div class="butler_list company list"">
 
                     <div class="layout">
                         <div class="head">
@@ -68,9 +68,9 @@
                         </div>
                         {#这里开始放置课程信息#}
                         {% for all_project in all_projects.object_list %}
-                            <dl class="des difdes" style="width: 1158px !important;">
+                            <dl class="des difdes" style="width: 900px !important;">
                                 <div>
-                                <span style="width: 1100px !important;float: left;margin-left: 20px;margin-top: 20px">
+                                <span style="width: 870px !important;float: left;margin-left: 20px;margin-top: 20px">
 {#                                    <div class="clearfix">#}
                                         <a href="{{ all_project.url }}" target="_blank">
                                             <h1>{{ all_project.title }}</h1>
