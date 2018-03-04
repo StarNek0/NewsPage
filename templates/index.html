@@ -5447,13 +5447,19 @@
 
                 <h2 class="rich_media_title" id="activity-name">
                     天府物联网快讯【{{ format_date }}】 </h2>
+
+                <div id="meta_content" class="rich_media_meta_list">
+
+                <a class="rich_media_meta" style="font-weight: bolder"
+                       href="{% url 'projects' %}">项目申报</a>
+                    <a class="rich_media_meta"
+                       href="{% url 'news' front_date %}">前一天</a>
+                    <a class="rich_media_meta"
+                       href="{% url 'news' behind_date %}">后一天</a>
+                </div>
                 <div id="meta_content" class="rich_media_meta_list">
                     <em id="post-date" class="rich_media_meta rich_media_meta_text">{{ date }}</em>
-
                     <em class="rich_media_meta rich_media_meta_text">CDIIDA 成都物联网产业发展联盟</em>
-
-
-
 
                     <div id="js_profile_qrcode" class="profile_container" style="display:none;">
                         <div class="profile_inner">
@@ -5479,14 +5485,6 @@
                         </span>
                     </div>
                 </div>
-            <div id="meta_content" class="rich_media_meta_list">
-                <a class="rich_media_meta" style="font-weight: bolder"
-                       href="{% url 'projects' %}">项目申报</a>
-                    <a class="rich_media_meta"
-                       href="{% url 'news' front_date %}">前一天</a>
-                    <a class="rich_media_meta"
-                       href="{% url 'news' behind_date %}">后一天</a>
-            </div>
 
 
                 <div class="rich_media_content " id="js_content">
