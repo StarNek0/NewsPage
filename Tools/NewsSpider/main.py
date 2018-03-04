@@ -22,6 +22,7 @@ from sites import policy_of_cd_jxw
 from sites import policy_of_sc_jxw
 from sites import policy_of_sc_tech
 from sites import policy_update
+
 while True:
     # 项目申报
     try:
@@ -34,11 +35,12 @@ while True:
 
     except Exception as e:
         with open('policy.txt', 'w+') as f:
-            f.write(e)
+            f.write(str(e))
 
     # 打分
     try:
-        db = pymysql.connect(host="localhost", user="root", password="klxsxzsdf1", db="newsspider", port=3306,charset='utf8')
+        db = pymysql.connect(host="localhost", user="root", password="klxsxzsdf1", db="newsspider", port=3306,
+                             charset='utf8')
         cur = db.cursor()
         sql = "select id,score,theme from news_news GROUP BY theme"
         cur.execute(sql)
@@ -53,21 +55,19 @@ while True:
                 cur.close()
         db.close()
     except Exception as e:
-        with open('score.txt','w+') as f:
-            f.write(e)
-
+        with open('score.txt', 'w+') as f:
+            f.write(str(e))
 
     # 爬虫
     try:
-        DATE1 = time.strftime('%Y-%m-%d',time.localtime(time.time()))
-        DATE2 = time.strftime('%Y-%m-%d',time.localtime(time.time()-24*3600))
+        DATE1 = time.strftime('%Y-%m-%d', time.localtime(time.time()))
+        DATE2 = time.strftime('%Y-%m-%d', time.localtime(time.time() - 24 * 3600))
         wulianchina.DATE = DATE1
         wulianchina.main()
         ofweek.DATE = DATE2
         ofweek.main()
     except Exception as e:
-        with open('craw.txt','w+') as f:
-            f.write(e)
+        with open('craw.txt', 'w+') as f:
+            f.write(str(e))
 
-
-    time.sleep(3*3600)
+    time.sleep(3 * 3600)
