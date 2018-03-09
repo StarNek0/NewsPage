@@ -24,18 +24,42 @@ from sites import policy_of_sc_tech
 from sites import policy_update
 
 while True:
-    # 项目申报
+
     try:
         policy_of_gaoxin.main()
-        policy_of_cd_tech.main()
-        policy_of_cd_jxw.main()
-        policy_of_sc_jxw.main()
-        policy_of_sc_tech.main()
-        policy_update.main()
-
     except Exception as e:
-        with open('policy.txt', 'w+') as f:
-            f.write(str(e))
+        with open('logs/policy_of_gaoxin.txt', 'w+') as f:
+            f.write(str(e)+str(time.time()))
+
+    try:
+        policy_of_cd_tech.main()
+    except Exception as e:
+        with open('logs/policy_of_cd_tech.txt', 'w+') as f:
+            f.write(str(e)+str(time.time()))
+
+    try:
+        policy_of_cd_jxw.main()
+    except Exception as e:
+        with open('logs/policy_of_cd_jxw.txt', 'w+') as f:
+            f.write(str(e)+str(time.time()))
+
+    try:
+        policy_of_sc_jxw.main()
+    except Exception as e:
+        with open('logs/policy_of_sc_jxw.txt', 'w+') as f:
+            f.write(str(e)+str(time.time()))
+    # 项目申报
+    try:
+        policy_of_sc_tech.main()
+    except Exception as e:
+        with open('logs/policy_of_sc_tech.txt', 'w+') as f:
+            f.write(str(e)+str(time.time()))
+    # 项目申报
+    try:
+        policy_update.main()
+    except Exception as e:
+        with open('logs/policy_update.txt', 'w+') as f:
+            f.write(str(e)+str(time.time()))
 
     # 打分
     try:
@@ -55,8 +79,8 @@ while True:
                 cur.close()
         db.close()
     except Exception as e:
-        with open('score.txt', 'w+') as f:
-            f.write(str(e))
+        with open('logs/score.txt', 'w+') as f:
+            f.write(str(e)+str(time.time()))
 
     # 爬虫
     try:
@@ -67,7 +91,7 @@ while True:
         ofweek.DATE = DATE2
         ofweek.main()
     except Exception as e:
-        with open('craw.txt', 'w+') as f:
-            f.write(str(e))
+        with open('logs/craw.txt', 'w+') as f:
+            f.write(str(e)+str(time.time()))
 
     time.sleep(3 * 3600)

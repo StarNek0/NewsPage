@@ -58,12 +58,12 @@
                     <div class="layout">
                         <div class="head">
                             <ul class="tab_header">
-                                <li class="{% if not time_order %}active{% endif %}"><a href="?ct={{ category }}">默认</a>
+                                <li class="{% if not time_order %}active{% endif %}"><a href="?ct={{ category }}&timerecent={{ time_recent }}">默认</a>
                                 </li>
                                 <li class="{% ifequal time_order 'time_down' %}active{% endifequal %}"><a
-                                        href="?ct={{ category }}&timeorder=time_down">时间降序 &#8595;</a></li>
+                                        href="?ct={{ category }}&timerecent={{ time_recent }}&timeorder=time_down">时间降序 &#8595;</a></li>
                                 <li class="{% ifequal time_order 'time_up' %}active{% endifequal %}"><a
-                                        href="?ct={{ category }}&timeorder=time_up">时间升序 &#8593;</a></li>
+                                        href="?ct={{ category }}&timerecent={{ time_recent }}&timeorder=time_up">时间升序 &#8593;</a></li>
 
                             </ul>
                         </div>
