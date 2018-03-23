@@ -24,42 +24,61 @@ from sites import policy_of_sc_tech
 from sites import policy_update
 
 while True:
+    this_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
+
+    with open('logs/run.txt', 'w+') as f:
+        f.write('Run once at ' + str(this_time) + '.\n')
+
+    # 爬虫
+    try:
+        DATE1 = time.strftime('%Y-%m-%d', time.localtime(time.time()))
+        DATE2 = time.strftime('%Y-%m-%d', time.localtime(time.time() - 24 * 3600))
+        wulianchina.DATE = DATE1
+        wulianchina.main()
+        ofweek.DATE = DATE2
+        ofweek.main()
+    except Exception as e:
+        with open('logs/craw.txt', 'w+') as f:
+            f.write(str(e)+str(this_time))
+
 
     try:
         policy_of_gaoxin.main()
     except Exception as e:
         with open('logs/policy_of_gaoxin.txt', 'w+') as f:
-            f.write(str(e)+str(time.time()))
+            f.write(str(e)+str(this_time))
 
     try:
         policy_of_cd_tech.main()
     except Exception as e:
         with open('logs/policy_of_cd_tech.txt', 'w+') as f:
-            f.write(str(e)+str(time.time()))
+            f.write(str(e)+str(this_time))
 
     try:
         policy_of_cd_jxw.main()
     except Exception as e:
         with open('logs/policy_of_cd_jxw.txt', 'w+') as f:
-            f.write(str(e)+str(time.time()))
+            f.write(str(e)+str(this_time))
 
     try:
         policy_of_sc_jxw.main()
     except Exception as e:
         with open('logs/policy_of_sc_jxw.txt', 'w+') as f:
-            f.write(str(e)+str(time.time()))
+            f.write(str(e)+str(this_time))
     # 项目申报
     try:
         policy_of_sc_tech.main()
     except Exception as e:
         with open('logs/policy_of_sc_tech.txt', 'w+') as f:
-            f.write(str(e)+str(time.time()))
+            f.write(str(e)+str(this_time))
     # 项目申报
     try:
         policy_update.main()
     except Exception as e:
         with open('logs/policy_update.txt', 'w+') as f:
-            f.write(str(e)+str(time.time()))
+            f.write(str(e)+str(this_time))
+
+
 
     # 打分
     try:
@@ -80,18 +99,6 @@ while True:
         db.close()
     except Exception as e:
         with open('logs/score.txt', 'w+') as f:
-            f.write(str(e)+str(time.time()))
+            f.write(str(e)+str(this_time))
 
-    # 爬虫
-    try:
-        DATE1 = time.strftime('%Y-%m-%d', time.localtime(time.time()))
-        DATE2 = time.strftime('%Y-%m-%d', time.localtime(time.time() - 24 * 3600))
-        wulianchina.DATE = DATE1
-        wulianchina.main()
-        ofweek.DATE = DATE2
-        ofweek.main()
-    except Exception as e:
-        with open('logs/craw.txt', 'w+') as f:
-            f.write(str(e)+str(time.time()))
-
-    time.sleep(3 * 3600)
+    time.sleep(2 * 3600)
